@@ -1,9 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-const Title = () => {
-    return <h1>Main title</h1>
-}
+import Titel from './Titel'
 const Content = () => {
     return (
         <>
@@ -20,10 +17,17 @@ const Content = () => {
         </>
     )
 }
+const App = () => {
+    return (
+        <>
+            <Titel />
+            <Content />
+        </>
+    )
+}
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
-        <Title />
-        <Content />
+        <App />
     </React.StrictMode>
 )
