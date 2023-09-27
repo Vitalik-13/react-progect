@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/konspect.js
 # production
 /build
 
