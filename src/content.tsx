@@ -1,6 +1,6 @@
 type PropsContent = {
     content1: string
-    content2: string
+    content2?: string
 }
 
 const Content = (props: PropsContent) => {
