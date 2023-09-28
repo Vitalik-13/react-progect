@@ -1,3 +1,8 @@
-export const Titel = () => {
-    return <h1>Main title export component</h1>
+interface PropsTitle {
+    title: string
 }
+
+const Titel = (props: PropsTitle) => {
+    return <h1>Hello {props.title}</h1>
+}
+export default Titel
