@@ -3,11 +3,11 @@ type PropsContent = {
     content2?: string
 }
 
-const Content = (props: PropsContent) => {
+const Content = ({ content1, content2 }: PropsContent) => {
     return (
         <>
-            <p>{props.content1}</p>
-            <p>{props.content2}</p>
+            <p>{content1}</p>
+            <p>{content2}</p>
         </>
     )
 }
