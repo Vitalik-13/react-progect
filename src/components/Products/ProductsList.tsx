@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material'
-
+import { Grid, Typography } from '@mui/material'
+import ProductListItem from './ProductListItem'
 type Props = {}
 const ProductsList = (props: Props) => {
     return (
@@ -8,13 +8,18 @@ const ProductsList = (props: Props) => {
                 variant="h4"
                 component="h1"
                 sx={{
-                    marginTop: '30px',
+                    marginBottom: '30px',
                     textTransform: 'uppercase',
                     textAlign: 'center',
                 }}
             >
-                List of products
+                List of Products
             </Typography>
+            <Grid container spacing={4}>
+                <Grid item xs={12} sm={4}>
+                    <ProductListItem />
+                </Grid>
+            </Grid>
         </>
     )
 }
