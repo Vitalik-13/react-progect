@@ -1,12 +1,12 @@
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-
-import Button from '@mui/material/Button'
+import Menu from 'components/Menu/Menu'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import './Header.scss'
 import Logo from 'components/Logo/Logo'
+import CardHeader from 'components/CardHeader/CardHeader'
 type Props = {}
 const Header = (props: Props) => {
     return (
@@ -14,6 +14,7 @@ const Header = (props: Props) => {
             <Container>
                 <Toolbar>
                     <IconButton
+                        className="menu-icon"
                         size="large"
                         edge="start"
                         color="inherit"
@@ -23,11 +24,8 @@ const Header = (props: Props) => {
                         <MenuIcon />
                     </IconButton>
                     <Logo />
-                    <Button color="inherit">Home</Button>
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Payment</Button>
-                    <Button color="inherit">Shipping</Button>
-                    <Button color="inherit">Cart</Button>
+                    <Menu />
+                    <CardHeader />
                 </Toolbar>
             </Container>
         </AppBar>
