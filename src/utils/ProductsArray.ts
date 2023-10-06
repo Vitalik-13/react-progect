@@ -29,7 +29,7 @@ const ProductsArray: Product[] = [
     },
     {
         productTitle: 'Iphone 13 Pro Max',
-        productsDscription: '13 ',
+        productsDscription: '13',
         productType: 'Phone',
         productsFeatures: '215',
         productsPrice: 1200,
