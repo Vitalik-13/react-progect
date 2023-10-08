@@ -25,9 +25,11 @@ const ProductsList = (props: Props) => {
                         productType,
                         productsFeatures,
                         productsPrice,
+                        img,
                     }) => (
                         <Grid item xs={12} sm={4} key={id}>
                             <ProductListItem
+                                img={img}
                                 productTitle={productTitle}
                                 productsDscription={productsDscription}
                                 productType={productType}
