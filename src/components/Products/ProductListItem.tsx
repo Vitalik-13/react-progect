@@ -19,7 +19,7 @@ const ProductListItem = ({
             <CardContent>
                 <h4 className="product-title">{productTitle}</h4>
                 <p className="product-description">
-                    This is Iphone {productsDscription}pro
+                    This is {productsDscription}
                 </p>
                 <div className="product-featuers">Type:{productType}</div>
                 <div className="product-featuers">
@@ -35,4 +35,5 @@ const ProductListItem = ({
         </Card>
     )
 }
+
 export default ProductListItem
