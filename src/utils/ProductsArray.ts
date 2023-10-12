@@ -1,52 +1,66 @@
 type Product = {
+    id: number
     productTitle: string
     productsDscription: string
     productType: string
     productsFeatures: string
     productsPrice: number
+    img: string
 }
 const ProductsArray: Product[] = [
     {
-        productTitle: 'Iphone 13 Pro',
-        productsDscription: '13',
+        id: 1,
+        productTitle: 'Iphone 8 ',
+        productsDscription: '8',
         productType: 'Phone',
         productsFeatures: '64',
-        productsPrice: 900,
+        productsPrice: 300,
+        img: '/images/iphone-black.webp',
     },
     {
+        id: 2,
         productTitle: 'Iphone 14 Pro',
-        productsDscription: '14',
+        productsDscription: 'Iphone 14 pro',
         productType: 'Phone',
         productsFeatures: '128',
-        productsPrice: 1000,
+        productsPrice: 1200,
+        img: '/images/iphone-blue.webp',
     },
     {
-        productTitle: 'Iphone 15 Pro',
-        productsDscription: '15',
+        id: 3,
+        productTitle: 'Iphone 15 Pro ',
+        productsDscription: 'Iphone 15 pro',
         productType: 'Phone',
         productsFeatures: '215',
         productsPrice: 1500,
+        img: '/images/iphone-gray.webp',
     },
     {
+        id: 4,
         productTitle: 'Iphone 13 Pro Max',
-        productsDscription: '13',
+        productsDscription: 'Iphone 13 pro Max',
         productType: 'Phone',
         productsFeatures: '215',
-        productsPrice: 1200,
+        productsPrice: 1000,
+        img: '/images/iphone-green.webp',
     },
     {
-        productTitle: 'Iphone 11',
-        productsDscription: '11',
+        id: 5,
+        productTitle: 'Iphone 11 pro',
+        productsDscription: 'Iphone 11 pro',
         productType: 'Phone',
         productsFeatures: '32',
         productsPrice: 500,
+        img: '/images/iphone-purple.webp',
     },
     {
+        id: 6,
         productTitle: 'Iphone X ',
-        productsDscription: 'X',
+        productsDscription: 'Iphone X',
         productType: 'Phone',
         productsFeatures: '64',
         productsPrice: 400,
+        img: '/images/iphone-red.webp',
     },
 ]
 export default ProductsArray

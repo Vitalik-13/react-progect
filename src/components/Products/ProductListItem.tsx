@@ -1,25 +1,47 @@
-import { Button, Card, CardActions, CardContent } from '@mui/material'
+import {
+    Button,
+    Card,
+    CardActions,
+    CardContent,
+    TextField,
+} from '@mui/material'
 import './ProductListItem.scss'
+import { useState } from 'react'
+
 type Props = {
     productTitle: string
     productsDscription: string
     productType: string
     productsFeatures: string
     productsPrice: number
+    img: string
 }
+
 const ProductListItem = ({
     productTitle,
     productsDscription,
     productType,
     productsFeatures,
     productsPrice,
+    img,
 }: Props) => {
+    const [count, setCount] = useState<number>(1)
+
+    const onIncrement = () => {
+        setCount((prevSet) => prevSet + 1)
+    }
+    const onDecrement = () => {
+        setCount((prevSet) => prevSet - 1)
+    }
     return (
         <Card variant="outlined" className="product">
             <CardContent>
+                <div className="product-image">
+                    <img src={img} alt="" />
+                </div>
                 <h4 className="product-title">{productTitle}</h4>
                 <p className="product-description">
-                    This is Iphone {productsDscription}pro
+                    This is {productsDscription}
                 </p>
                 <div className="product-featuers">Type:{productType}</div>
                 <div className="product-featuers">
@@ -31,8 +53,26 @@ const ProductListItem = ({
                 <CardActions className="buttons-wrapper">
                     <Button variant="outlined">Add to cart</Button>
                 </CardActions>
+                <div className="product-qantiti">
+                    <Button
+                        variant="outlined"
+                        onClick={onDecrement}
+                        disabled={count <= 1}
+                    >
+                        -
+                    </Button>
+                    <TextField size="small" value={count} />
+                    <Button
+                        variant="outlined"
+                        onClick={() => onIncrement()}
+                        disabled={count >= 10}
+                    >
+                        +
+                    </Button>
+                </div>
             </CardContent>
         </Card>
     )
 }
+
 export default ProductListItem
