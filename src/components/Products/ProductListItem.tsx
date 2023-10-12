@@ -26,6 +26,7 @@ const ProductListItem = ({
     img,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
+
     const onIncrement = () => {
         setCount((prevSet) => prevSet + 1)
     }

@@ -3,9 +3,19 @@ import Header from 'container/Header/Header'
 import Main from 'container/Main/Main'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
+import { useState } from 'react'
 
 type Props = {}
+type TotalNumder = {
+    totalCount: number
+    totalPrice: number
+}
 const App = (props: Props) => {
+    const [cardDate, setCardDate] = useState<TotalNumder>({
+        totalCount: 10,
+        totalPrice: 100,
+    })
+
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
