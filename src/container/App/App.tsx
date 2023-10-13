@@ -6,20 +6,20 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import { useState } from 'react'
 
 type Props = {}
-type TotalNumder = {
+type totalNumder = {
     totalCount: number
     totalPrice: number
 }
 const App = (props: Props) => {
-    const [cardDate, setCardDate] = useState<TotalNumder>({
-        totalCount: 10,
-        totalPrice: 100,
+    const [totalNumder, setTotalNumder] = useState<totalNumder>({
+        totalCount: 0,
+        totalPrice: 0,
     })
 
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header />
+            <Header totalNumder={totalNumder} />
             <Main />
             <Footer />
         </StyledEngineProvider>

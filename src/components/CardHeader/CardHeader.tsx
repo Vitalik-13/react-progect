@@ -1,10 +1,15 @@
-type Props = {}
+type Props = {
+    totalNumder: {
+        totalCount: number
+        totalPrice: number
+    }
+}
 
-const CardHeader = (props: Props) => {
+const CardHeader = ({ totalNumder }: Props) => {
     return (
         <div>
-            <div>0</div>
-            <div>$0</div>
+            <div>{totalNumder.totalCount}</div>
+            <div>${totalNumder.totalPrice}</div>
         </div>
     )
 }

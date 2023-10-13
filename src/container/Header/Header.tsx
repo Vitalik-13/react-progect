@@ -7,8 +7,14 @@ import Container from '@mui/material/Container'
 import './Header.scss'
 import Logo from 'components/Logo/Logo'
 import CardHeader from 'components/CardHeader/CardHeader'
-type Props = {}
-const Header = (props: Props) => {
+type Props = {
+    totalNumder: {
+        totalCount: number
+        totalPrice: number
+    }
+}
+
+const Header = ({ totalNumder }: Props) => {
     return (
         <AppBar position="static" className="app-bar">
             <Container>
@@ -25,7 +31,7 @@ const Header = (props: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
-                    <CardHeader />
+                    <CardHeader totalNumder={totalNumder} />
                 </Toolbar>
             </Container>
         </AppBar>
