@@ -10,17 +10,25 @@ type totalNumder = {
     totalCount: number
     totalPrice: number
 }
+
 const App = (props: Props) => {
     const [totalNumder, setTotalNumder] = useState<totalNumder>({
         totalCount: 0,
         totalPrice: 0,
     })
 
+    const addTocard = (count: number, price: number) => {
+        setTotalNumder((prevSet) => ({
+            totalCount: prevSet.totalCount + count,
+            totalPrice: prevSet.totalPrice + count * price,
+        }))
+    }
+
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header totalNumder={totalNumder} />
-            <Main />
+            <Main addTocard={addTocard} />
             <Footer />
         </StyledEngineProvider>
     )

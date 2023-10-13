@@ -4,7 +4,7 @@ type Product = {
     productsDscription: string
     productType: string
     productsFeatures: string
-    productsPrice: number
+    price: number
     img: string
 }
 const ProductsArray: Product[] = [
@@ -14,7 +14,7 @@ const ProductsArray: Product[] = [
         productsDscription: '8',
         productType: 'Phone',
         productsFeatures: '64',
-        productsPrice: 300,
+        price: 300,
         img: '/images/iphone-black.webp',
     },
     {
@@ -23,7 +23,7 @@ const ProductsArray: Product[] = [
         productsDscription: 'Iphone 14 pro',
         productType: 'Phone',
         productsFeatures: '128',
-        productsPrice: 1200,
+        price: 1200,
         img: '/images/iphone-blue.webp',
     },
     {
@@ -32,7 +32,7 @@ const ProductsArray: Product[] = [
         productsDscription: 'Iphone 15 pro',
         productType: 'Phone',
         productsFeatures: '215',
-        productsPrice: 1500,
+        price: 1500,
         img: '/images/iphone-gray.webp',
     },
     {
@@ -41,7 +41,7 @@ const ProductsArray: Product[] = [
         productsDscription: 'Iphone 13 pro Max',
         productType: 'Phone',
         productsFeatures: '215',
-        productsPrice: 1000,
+        price: 1000,
         img: '/images/iphone-green.webp',
     },
     {
@@ -50,7 +50,7 @@ const ProductsArray: Product[] = [
         productsDscription: 'Iphone 11 pro',
         productType: 'Phone',
         productsFeatures: '32',
-        productsPrice: 500,
+        price: 500,
         img: '/images/iphone-purple.webp',
     },
     {
@@ -59,7 +59,7 @@ const ProductsArray: Product[] = [
         productsDscription: 'Iphone X',
         productType: 'Phone',
         productsFeatures: '64',
-        productsPrice: 400,
+        price: 400,
         img: '/images/iphone-red.webp',
     },
 ]
