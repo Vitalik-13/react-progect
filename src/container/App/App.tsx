@@ -17,11 +17,10 @@ const App = (props: Props) => {
         2: 5,
     })
     const addToProductCard = (id: number, count: number) => {
-        setProductInCard((prevstate) =>
-            Object.assign({}, prevstate, {
-                [id]: prevstate[id] + count,
-            })
-        )
+        setProductInCard((prevState) => ({
+            ...prevState,
+            [id]: prevState[id] + count,
+        }))
     }
     return (
         <StyledEngineProvider injectFirst>
