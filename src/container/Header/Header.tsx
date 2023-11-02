@@ -8,13 +8,12 @@ import './Header.scss'
 import Logo from 'components/Logo/Logo'
 import CardHeader from 'components/CardHeader/CardHeader'
 type Props = {
-    totalNumder: {
-        totalCount: number
-        totalPrice: number
+    productIncard: {
+        [id: number]: number
     }
 }
 
-const Header = ({ totalNumder }: Props) => {
+const Header = ({ productIncard }: Props) => {
     return (
         <AppBar position="static" className="app-bar">
             <Container>
@@ -31,7 +30,7 @@ const Header = ({ totalNumder }: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
-                    <CardHeader totalNumder={totalNumder} />
+                    <CardHeader productIncard={productIncard} />
                 </Toolbar>
             </Container>
         </AppBar>
