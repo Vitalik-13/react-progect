@@ -11,10 +11,9 @@ type productIncardType = {
     [id: number]: number
 }
 const App = (props: Props) => {
-    const addTocard = (count: number, price: number) => {}
     const [productIncard, setProductInCard] = useState<productIncardType>({
-        1: 5,
-        2: 5,
+        1: 0,
+        2: 0,
     })
     const addToProductCard = (id: number, count: number) => {
         setProductInCard((prevState) => ({
@@ -26,8 +25,7 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productIncard={productIncard} />
-            <button onClick={() => addToProductCard(2, 5)}>add to card</button>
-            <Main addTocard={addTocard} />
+            <Main addToProductCard={addToProductCard} />
             <Footer />
         </StyledEngineProvider>
     )
