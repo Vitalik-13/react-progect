@@ -6,21 +6,26 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import { useState } from 'react'
 
 type Props = {}
-type TotalNumder = {
-    totalCount: number
-    totalPrice: number
+
+type productIncardType = {
+    [id: number]: number
 }
 const App = (props: Props) => {
-    const [cardDate, setCardDate] = useState<TotalNumder>({
-        totalCount: 10,
-        totalPrice: 100,
+    const [productIncard, setProductInCard] = useState<productIncardType>({
+        1: 0,
+        2: 0,
     })
-
+    const addToProductCard = (id: number, count: number) => {
+        setProductInCard((prevState) => ({
+            ...prevState,
+            [id]: prevState[id] + count,
+        }))
+    }
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header />
-            <Main />
+            <Header productIncard={productIncard} />
+            <Main addToProductCard={addToProductCard} />
             <Footer />
         </StyledEngineProvider>
     )
